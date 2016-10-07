@@ -1,0 +1,937 @@
+﻿@import "kadho-variables.less";
+
+.register-landing {
+  background-image: url('../img/landing_page_image1_desktop.jpg');
+  background-repeat: no-repeat;
+  height: 920px;
+  background-size: cover;
+  background-position: center center;
+  display: block;
+  /*font-family: 'Microsoft YaHei UI';*/
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+
+.register-arrow {
+  width: 80px;
+  margin-top: 30px;
+}
+
+.register-english-font {
+  font-family: sans-serif;
+  font-size: 0.7em;
+  font-weight: normal;
+}
+
+.register-landing-text-1 {
+  font-size: 75px;
+  font-weight: bold;
+}
+
+.register-landing-text-2 {
+  font-size: 32px;
+  font-weight: lighter;
+}
+
+.register-landing-number {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 40px;
+}
+
+.register-login-text {
+  font-size: 17px;
+  color: @brand-primary;
+  /*font-weight: bold;*/
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.register-login-text a {
+  color: @brand-danger;
+}
+
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 100;
+}
+
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalDialog > div {
+  /*width: 400px;*/
+  position: relative;
+  /*margin-top: 5%;*/
+  padding: 20px;
+  margin: auto;
+  max-width: 1000px;
+}
+
+.close {
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: 12px;
+  text-align: center;
+  top: 10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+  background: white;
+}
+
+.register-container {
+  position: relative;
+  z-index: 5;
+  margin-top: -300px;
+  background-image: url('../img/blue_bg_desktop.png');
+  background-position: center top;
+  background-size: cover;
+  padding-top: 250px;
+  padding-bottom: 50px;
+}
+
+.register-rays {
+  background-image: url('../img/asset_2.png');
+  background-repeat: no-repeat;
+  background-size: 700px 700px;
+  background-position: center top;
+  top: 400px;
+  position: absolute;
+  display: block;
+  height: 700px;
+  width: 100vw;
+  z-index: 10;
+}
+
+.register-form-container {
+  z-index: 190;
+  position: relative;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.register-title {
+}
+
+.register-title-2 {
+  margin-top: 120px;
+  max-width: 185px;
+}
+
+.register-panel {
+  padding: 20px;
+  border-radius: 15px;
+  color: @brand-primary;
+}
+
+.register-form-control {
+  color: @brand-primary;
+  border: none;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.register-side-icons {
+  padding-left: 20px;
+  padding-right: 10px;
+  font-size: 14px;
+}
+
+.register-form-text {
+  color: @brand-primary;
+  font-size: 14px;
+  padding-right: 20px;
+}
+
+.register-divider {
+  border-bottom: 1px solid @brand-primary;
+  display: block;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.register-cb {
+  border: 1px solid #f26585;
+}
+
+input[type=checkbox].css-checkbox {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+  padding-left: 23px;
+  height: 18px;
+  display: inline-block;
+  line-height: 18px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 18px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  background-position: 0 -18px;
+}
+
+.register-promocode-section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: @brand-primary;
+  text-align: center;
+  font-size: 20px;
+}
+
+.register-promo-box {
+  color: #2dbbfb;
+  border: 2px dashed @brand-primary;
+  padding: 10px;
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  background-color: white;
+}
+
+.register-tos-wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.register-tos {
+  padding-left: 15px;
+  color: @brand-primary;
+  font-size: 15px;
+  width: 300px;
+}
+
+.register-checkbox {
+  width: 25px;
+  /*padding-top: 10px;*/
+}
+
+.register-video-btn-text {
+  font-size: 23px;
+  color: white;
+  font-family: sans-serif;
+  margin-top: -31px;
+  margin-left: 30px;
+  text-align: left;
+}
+
+.register-video-btn {
+  /*background-image: url("../img/btn_pill_red.png");*/
+  width: 220px;
+  height: 57px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  /*text-align: center;*/
+  position: relative;
+  background: #00aeef;
+  background: -webkit-linear-gradient(#00aeef, #00aeef);
+  background: -o-linear-gradient(#00aeef, #00aeef);
+  background: -moz-linear-gradient(#00aeef, #00aeef);
+  background: linear-gradient(#00aeef, #00aeef);
+  border: 2px solid #FFFFFF;
+  padding: 10px;
+  border-radius: 100px;
+}
+
+.register-video-btn-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  margin-left: 5px;
+  border-width: 15px 0 15px 25px;
+  border-color: transparent transparent transparent #ffffff;
+}
+
+.register-video-btn-outline:hover:before, .register-video-btn-outline:focus:before {
+   width: 242px;
+   height: 75px;
+   margin-top: -21px;
+    margin-left: -121px;
+    border: #FFFFFF solid 3px;
+}
+
+.register-video-btn-outline:before {
+  content: '';
+   border-radius: 100px;
+   width: 220px;
+  height: 57px;
+  position: absolute;
+  border: #FFFFFF solid 0px;
+  margin-top: -12px;
+  margin-left: -110px;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: width, height, margin-left, margin-top, border;
+  transition-property: width, height, margin-top, margin-left, border;
+}
+
+.register-video-btn-outline {
+  display: block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+.register-btn {
+  /*background-image: url("../img/btn_pill_red.png");*/
+  /*background-size: 100%;*/
+  /*background-color: none;*/
+  display: block;
+  /*width: 300px;*/
+  /*height: 77px;*/
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  /*padding: 20px;*/
+  margin-left: auto;
+  margin-right: auto;
+  /*cursor: pointer;*/
+  position: relative;
+  background: #e94b64;
+  background: -webkit-linear-gradient(#ec5676, #e94b64);
+  background: -o-linear-gradient(#ec5676, #e94b64);
+  background: -moz-linear-gradient(#ec5676, #e94b64);
+  background: linear-gradient(#ec5676, #e94b64);
+  border: 8px solid #c73f53;
+  padding: 10px;
+  border-radius: 100px;
+}
+
+.register-btn-img {
+  z-index: -1;
+  width: 100%;
+}
+
+.register-btn-text {
+  position: absolute;
+  top: 30%;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.register-return-btn {
+  border: 2px dashed @brand-danger;
+  color: @brand-danger;
+  border-radius: 40px;
+  background-color: none;
+  display: block;
+  width: 250px;
+  height: 70px;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.register-return-btn span {
+  color: @brand-danger;
+}
+
+.register-error {
+  margin-top: 10px;
+  background-color: #f8d2e4;
+  color: #EE2A7B;
+  padding: 7px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.register-error-icon {
+  color: #EE2A7B;
+  font-size: 20px;
+  padding-top: 5px;
+}
+
+.register-wait-block {
+  background-color: rgba(255, 255, 255, 0.46);
+  color: @brand-primary;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  padding-top: 200px;
+  font-size: 40px;
+  z-index: 100;
+  text-align: center;
+}
+
+.register-success-main {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.register-success-sub {
+  text-align: center;
+}
+
+.register-text-input {
+  text-align: center;
+}
+
+/* Some custom sizes */
+@media (max-width: 500px) {
+  .register-title {
+    width: 180px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .register-form-container {
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .register-panel {
+    border-radius: 15px;
+    color: @brand-primary;
+  }
+
+  .register-form-control {
+    font-size: 16px;
+  }
+
+  .register-divider {
+    padding-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .register-side-icons {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .register-promocode-section {
+    padding-top: 10px;
+    padding-bottom: 2px;
+    font-size: 16px;
+  }
+
+  .register-promo-box {
+    color: #2dbbfb;
+    padding: 8px;
+    font-size: 18px;
+  }
+
+  .register-tos-wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .register-tos {
+    padding-left: 10px;
+    color: @brand-primary;
+    font-size: 14px;
+    width: 250px;
+  }
+
+  .register-checkbox {
+    width: 15px;
+    /*padding-top: 8px;*/
+  }
+
+  .register-btn {
+    font-size: 25px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .register-form-text {
+    padding-right: 10px;
+  }
+
+  .register-error {
+    margin-top: 5px;
+    padding: 7px;
+    font-size: 14px;
+  }
+
+  .register-error-icon {
+    font-size: 14px;
+    padding-top: 5px;
+  }
+
+  .register-landing-text-1 {
+    font-size: 150px;
+  }
+
+  .register-landing-text-2 {
+    font-size: 50px;
+  }
+
+  .register-container {
+    position: relative;
+    z-index: 5;
+    margin-top: -180px;
+    background-image: url('../img/blue_bg.png');
+    background-size: cover;
+    padding-top: 180px;
+    padding-bottom: 0;
+  }
+
+  .register-landing {
+    background-image: url('../img/landing_page_image1.png');
+    background-repeat: no-repeat;
+    height: 650px;
+  }
+}
+
+@media (min-width: 320px) {
+  
+  .register-landing-text-1 {
+    font-size: 45px;
+  }
+
+  .register-landing-text-2 {
+    font-size: 22px;
+  }
+      .register-white-block {
+  background: white;
+  display: block;
+  height: 1400px;
+  width: 100%;
+  z-index: -2;
+}
+
+  .register-container {
+    position: relative;
+    z-index: 5;
+    margin-top: -430px;
+    background-image: url('../img/blue_bg.png');
+    background-size: cover;
+    padding-top: 180px;
+    padding-bottom: 0;
+  }
+
+img.register-block {
+  max-width: 320px;
+}
+
+.register-white-block-container {
+  width: 100%;
+  height: 450px;
+  padding-bottom: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.register-white-block-floater-left {
+  padding-top: 10px;
+  width: 320px;
+  margin: auto;
+  display: block;
+  color: @brand-primary;
+}
+
+.register-white-block-floater-right {
+  margin: auto;
+  padding-top: 10px;
+  width: 320px;
+  display: block;
+  color: @brand-primary;
+}
+
+.register-description-title {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+  }
+
+.register-description-text {
+    font-size: 14px;
+    text-align: center;
+  }
+
+ul.register-description-text {
+    font-size: 14px;
+    text-align: left; 
+    list-style-type: circle;
+  }
+
+  .register-form-block-container {
+    font-size: 17px;
+     padding-top: 150px;
+    text-align: center;
+    color: @brand-primary;
+  }
+
+    .register-form-block-left {
+      padding-top: 10px;
+  }
+
+  .register-form-block-right {
+    padding-top: 50px;
+    font-size: 12px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 70%;
+    color: @brand-primary;
+  }
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  .register-side-icons {
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 20px;
+  }
+
+.register-container {
+  position: relative;
+  z-index: 5;
+  margin-top: -380px;
+  background-image: url('../img/blue_bg_desktop.png');
+  background-position: center top;
+  background-size: cover;
+  padding-top: 250px;
+  padding-bottom: 50px;
+}
+
+  .register-form-text {
+    color: @brand-primary;
+    font-size: 20px;
+    padding-right: 20px;
+  }
+
+  .register-tos {
+    padding-left: 15px;
+    font-size: 15px;
+    width: 300px;
+  }
+
+  .register-checkbox {
+    width: 25px;
+    /*padding-top: 10px;*/
+  }
+
+  .register-promocode-section {
+    padding-top: 15px;
+    font-size: 25px;
+  }
+   .register-title-2 {
+    margin-top: 100px;
+    max-width: 330px;
+  }
+
+img.register-block {
+  max-width: 1200px;
+}
+
+  .register-white-block {
+  background: white;
+  display: block;
+  height: 1650px;
+  width: 100%;
+  z-index: -2;
+}
+
+.register-white-block-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 450px;
+  padding-bottom: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.register-white-block-floater-left {
+  padding-top: 10px;
+  width: 500px;
+  margin: auto;
+  display: block;
+  color: @brand-primary;
+}
+
+.register-white-block-floater-right {
+  margin: auto;
+  padding-top: 10px;
+  width: 500px;
+  display: block;
+  color: @brand-primary;
+}
+
+.register-description-title {
+    font-weight: bold;
+    font-size: 27px;
+    text-align: center;
+  }
+
+.register-description-text {
+    font-size: 15px;
+    text-align: center;
+  }
+
+ul.register-description-text {
+    font-size: 15px;
+    text-align: left; 
+    list-style-type: circle;
+  }
+
+  .register-form-block-container {
+    font-size: 20px;
+    padding-top: 200px;
+    text-align: center;
+    color: @brand-primary;
+  }
+
+    .register-form-block-left {
+  }
+
+  .register-form-block-right {
+    padding-top: 50px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    color: @brand-primary;
+  }
+}
+
+@media (min-width: 800px) {
+    .register-container {
+    position: relative;
+    z-index: 5;
+    margin-top: -420px;
+    background-image: url('../img/blue_bg_desktop.png');
+    background-position: center top;
+    background-size: cover;
+    padding-top: 250px;
+    padding-bottom: 50px;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+  .register-landing-text-1 {
+    font-size: 100px;
+  }
+
+  .register-landing-text-2 {
+    font-size: 36px;
+  }
+
+   .register-container {
+    position: relative;
+    z-index: 5;
+    margin-top: -300px;
+    background-image: url('../img/blue_bg_desktop.png');
+    background-position: center top;
+    background-size: cover;
+    padding-top: 250px;
+    padding-bottom: 50px;
+  }
+
+  .register-title-2 {
+    margin-top: 100px;
+    max-width: 330px;
+  }
+
+    .register-white-block {
+  background: white;
+  display: block;
+  height: 1600px;
+  width: 100%;
+  z-index: -2;
+}
+
+.register-white-block-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 450px;
+  padding-bottom: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.register-white-block-floater-left {
+  padding-top: 10px;
+  width: 500px;
+  margin: auto;
+  display: block;
+  color: @brand-primary;
+}
+
+.register-white-block-floater-right {
+  margin: auto;
+  padding-top: 10px;
+  width: 500px;
+  display: block;
+  color: @brand-primary;
+}
+
+.register-description-title {
+    font-weight: bold;
+    font-size: 27px;
+    text-align: center;
+  }
+
+.register-description-text {
+    font-size: 15px;
+    text-align: center;
+  }
+
+ul.register-description-text {
+    font-size: 15px;
+    text-align: left; 
+    list-style-type: circle;
+  }
+
+.register-form-block-container {
+    font-size: 20px;
+    text-align: center;
+    margin-top: -150px;
+    color: @brand-primary;
+  }
+
+    .register-form-block-left {
+    float: left;
+    margin-top: -20px;
+  }
+
+  .register-form-block-right {
+    float: right;
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+    color: @brand-primary;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+.register-landing-text-1 {
+    font-size: 130px;
+  }
+
+  .register-landing-text-2 {
+    font-size: 36px;
+  }
+  .register-white-block {
+  background: white;
+  display: block;
+  height: 1050px;
+  width: 100%;
+  z-index: -2;
+}
+
+.register-white-block-container {
+  height: 450px;
+  padding-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.register-white-block-floater-left {
+  float: left;
+  padding-top: 10px;
+  width: 600px;
+  min-width: 400px;
+  margin: auto;
+  color: @brand-primary;
+}
+
+.register-white-block-floater-right {
+  float: right;
+  margin: auto;
+  padding-top: 10px;
+  width: 600px;
+  min-width: 400px;
+  color: @brand-primary;
+}
+
+.register-description-title {
+    font-weight: bold;
+    font-size: 36px;
+    text-align: left;
+  }
+
+.register-description-text {
+    font-size: 20px;
+    text-align: left;
+  }
+
+ul.register-description-text {
+    font-size: 20px;
+    text-align: left; 
+    list-style-type: circle;
+  }
+
+
+  .register-form-block-container {
+    font-size: 20px;
+    text-align: center;
+    color: @brand-primary;
+  }
+
+  .register-form-block-left {
+    float: left;
+    margin-top: -20px;
+  }
+
+  .register-form-block-right {
+    float: right;
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+    color: @brand-primary;
+  }
+}

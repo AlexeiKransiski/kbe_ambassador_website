@@ -1,0 +1,13 @@
+[
+  "bower_components/modernizr/modernizr.custom.js",
+  "bower_components/fontawesome/css/font-awesome.min.css",
+  "bower_components/fontawesome/fonts/*",
+  "bower_components/animate.css/animate.min.css",
+  "bower_components/angular-i18n/angular-locale_en.js",
+  "bower_components/angular-i18n/angular-locale_zh.js",
+  "bower_components/angular-material/angular-material.js",
+  "bower_components/angular-material/angular-material.css",
+  "bower_components/crypto-js/components/core-min.js",
+  "bower_components/crypto-js/components/sha256.js",
+  "bower_components/crypto-js/components/enc-base64.js"
+]

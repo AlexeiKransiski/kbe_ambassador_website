@@ -1,0 +1,16 @@
+﻿
+<div class="p-lg text-center footer">
+  <div ng-show="language.selected == 'English'">
+    <a href="/page/tos-en" target="_blank">{{ 'register.TOSVIEW' | translate }}</a> | <a href="/page/privacy-en" target="_blank">{{ 'register.PRIVACY' | translate }}</a>
+  </div>
+  <div ng-show="language.selected == 'Chinese'">
+    <a href="/page/tos-cn" target="_blank">{{ 'register.TOSVIEW' | translate }}</a> | <a href="/page/privacy-cn" target="_blank">{{ 'register.PRIVACY' | translate }}</a>
+  </div>
+  <br />
+  <span>{{ 'register.COPYRIGHT' | translate }} &copy;</span>
+  <span ng-bind="app.year"></span>
+  <span ng-bind="app.company"></span> 
+  {{ 'register.ALLRIGHTSRESERVED' | translate }} 
+  <br /> 
+  湘ICP备16007494号-2
+</div>

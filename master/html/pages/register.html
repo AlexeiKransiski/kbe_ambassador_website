@@ -1,0 +1,345 @@
+﻿<div ng-controller="RegisterFormController as reg">
+  <!-- Language selection -->
+<header ng-include="'app/views/partials/languageselector.html'"></header>
+<!-- Video modal -->
+<div class="modalDialog" ng-show="reg.popupVideoVisible" ng-click="reg.closeVideo();">
+  <div>
+    <a href="#" title="Close" class="close" ng-click="reg.closeVideo();"><i class="fa fa-close"></i></a>
+    <video id="popupVideo" style="width: 100%"  poster="/app/img/video-cover.jpg">
+      <!--  <source src="https://s3-us-west-1.amazonaws.com/beta.kadho.com/Video_3.mp4" type="video/mp4" />
+      <source src="https://s3-us-west-1.amazonaws.com/beta.kadho.com/Video_3.ogg" type="video/ogg" />
+      <source src="https://s3-us-west-1.amazonaws.com/beta.kadho.com/Video_3.webm" type="video/webm" /> -->
+      <source src="https://s3.cn-north-1.amazonaws.com.cn/kadhoelp/Video_3.mp4" type="video/mp4" />
+      <source src="https://s3.cn-north-1.amazonaws.com.cn/kadhoelp/Video_3.ogg" type="video/ogg" />
+      <source src="https://s3.cn-north-1.amazonaws.com.cn/kadhoelp/Video_3.webm" type="video/webm" />
+    </video>
+  </div>
+</div>
+<div class="register-wait-block fade3-animation" ng-show="reg.disableSubmit">
+  <span class="fa fa-spin fa-circle-o-notch "></span> Please Wait
+</div>
+<div class="register-landing">
+  <div class="container">
+    <img class="img-responsive center-block register-title-2" src="../app/img/elp_logo.png" />
+    <br>
+    <br>
+    <div class="register-video-btn" ng-click="reg.showVideo()">
+      
+      <div class="register-video-btn-outline"></div>
+      <div class="register-video-btn-arrow"></div>
+      <div class="register-video-btn-text">
+        <span>{{'register.VIDEO' | translate}}</span>
+      </div>
+    </div>
+    <br>
+    <div ng-show="language.selected == 'Chinese'">
+      <div class="register-landing-text-1">
+        最高享受1折优惠!
+      </div>
+      <div class="register-landing-text-2">
+        {{ 'register.LANDING2' | translate }}
+      </div>
+    </div>
+    <div ng-show="language.selected == 'English'">
+      <div class="register-landing-text-1">
+        <div class="register-english-font">
+          Save up to 90%!
+        </div>
+      </div>
+      <div class="register-landing-text-2">
+        <div  class="register-english-font">
+          {{ 'register.LANDING2' | translate }}
+        </div>
+      </div>
+    </div>
+    
+    
+    <img class="center-block register-arrow visible-xs visible-sm visible-md" src="../app/img/arrow.png" />
+  </div>
+</div>
+<div class="register-white-block">
+  <div class="register-white-block-container">
+    <div class="register-white-block-floater-left">
+      <img class="register-block" src="../app/img/graphic_tablet.png" />
+    </div>
+    <div class="register-white-block-floater-right">
+      <br><br><br>
+      <div class="register-description-title">
+        开豆英语
+      </div>
+      <br>
+      <p class="register-description-text">
+        适用于孩子的语言浸入式学习
+      </p>
+      <p class="register-description-text">
+        “开豆英语”是一个由科学家、教育工作者和语言学习专家组成的团队所开发的应用软件。目的为促进2-7岁幼儿的语言发育，在这段发育的关键时期，将英语语系植入宝宝的脑神经之中，不仅能让宝宝说一口地道的美式英语，并且还能让他们爱上英语，在成长中拥有超凡的英语学习能力。本软件既可以支持独立学习，也可以作为英语课堂的补充。
+      </p>
+    </div>
+  </div>
+  <div class="register-white-block-container">
+    <div class="register-white-block-floater-left">
+      <div class="register-description-title">
+        免费下载开豆英语APP<br>
+        每天只需10分钟<br>
+        让孩子说一口地道英语
+      </div>
+      <br>
+      <ul class="register-description-text">
+        <li>全美教育媒体评选排名第一的英语学习APP。</li>
+        <li> 基于神经科学的教学设置，让英语语系植入宝宝大脑之中。</li>
+        <li> 超过100种的沉浸式教学课程，让宝宝玩在其中，学在其中。</li>
+        <li> 简单，有趣，又好玩，内容多多，让家长安心，让宝宝学的开心。</li>
+        <li> 互动式的口语教学让宝宝说一口地道美式英语。</li>
+        <li> 让宝宝轻松累计1000+个日常单词。</li>
+      </ul>
+    </div>
+    <div class="register-white-block-floater-right">
+      <img class="register-block" src="../app/img/graphic_characters.png" />
+    </div>
+  </div>
+</div>
+<!--<div class="register-rays"></div>-->
+<div class="register-container">
+<div class="container ">
+  <div class="register-form-block-container">
+    <p>
+        您可以通过扫描页面下方二维码的方式下载开豆英语APP，和关注我们的微信公众号。
+      </p>
+      <p>
+        现在立即注册的家长们，将可享有最高1折的优惠！
+        注册过的家长登陆后也可享有相同折扣！
+      </p>
+      <br>
+    <div class="register-form-block-left">
+      <div class="register-form-container">
+        <!-- LOGIN panel-->
+        <form role="form" name="reg.loginForm" novalidate="" onsubmit="return false;" class="form-validate mb-lg login-form" ng-disable="reg.disableSubmit" ng-show="reg.showLogin" autocomplete="off">
+          <div class="panel panel-flat register-panel">
+            <!-- Initial screen -->
+            <div ng-show="!reg.showSuccess">
+              <div class="form-group" ng-class="reg.highlightEmail" ng-if="!reg.showPhoneNumber">
+                <div class="register-side-icons pull-left">
+                  <span class="fa fa-envelope"></span>
+                </div>
+                <input type="email" name="account_email" placeholder="{{'register.EMAIL' | translate}}" autocomplete="off" ng-model="reg.accountLogin.email" required=""
+                class="register-form-control pull-left" />
+                <div class="register-error-icon pull-right" ng-show="reg.highlightEmail != ''">
+                  <span class="fa fa-warning"></span>
+                </div>
+              </div>
+              <div class="form-group" ng-class="reg.highlightPhone" ng-if="reg.showPhoneNumber" style="position: relative;">
+                <div style="position: absolute; top: 5px; left: 30px">
+                  +86
+                </div>
+                <div class="register-side-icons pull-left">
+                  <span class="fa fa-phone"></span>
+                </div>
+                <input type="tel" name="account_phone" placeholder="{{'register.PHONE' | translate}}" autocomplete="off" ng-model="reg.accountLogin.phoneNumber" required=""
+                class="register-form-control pull-left" style="padding-left: 25px;" />
+                <div class="register-error-icon pull-right" ng-show="reg.highlightPhone != ''">
+                  <span class="fa fa-warning"></span>
+                </div>
+              </div>
+              <br class="clear" />
+              <div class="register-divider"></div>
+              <div class="form-group" ng-class="reg.highlightPassword">
+                <div class="register-side-icons pull-left">
+                  <span class="fa fa-lock"></span>
+                </div>
+                <input id="id-password" type="password" autocomplete="false" name="account_password" placeholder="{{'register.PASSWORD' | translate}}" ng-model="reg.accountLogin.password" required="" class="register-form-control pull-left" />
+                <div class="register-error-icon pull-right" ng-show="reg.highlightPassword != ''">
+                  <span class="fa fa-warning"></span>
+                </div>
+              </div>
+              <br class="clear" />
+              <div class="register-error fade3-animation" ng-show="reg.authMsg != ''">
+                {{reg.authMsg | translate}}
+                {{reg.errorPassword | translate}}
+                {{reg.errorTerms | translate}}
+              </div>
+            </div>
+          </div>
+          <div class="login-forgot">
+            <a href="{{reg.forgotPasswordLink}}">{{ 'register.FORGOT' | translate }}</a>
+          </div>
+          <!--Initial screen-->
+          <div ng-show="!reg.showSuccess">
+            <div class="register-promocode-section">
+              {{'register.PROMOCODE' | translate}}:
+            </div>
+            <div class="register-promo-box">
+              <span ng-if="!reg.allowPromoInput">
+                {{reg.promoCode}}
+              </span>
+              <input ng-if="reg.allowPromoInput" class="register-text-input" ng-model="reg.promoCode" type="text" />
+            </div>
+            <br />
+            <div class="register-btn" ng-click="reg.login()" ng-disable="reg.disableSubmit">
+              <span ng-show="!reg.disableSubmit">{{'register.LOGIN' | translate}}</span>
+              <span ng-show="reg.disableSubmit"><span class="fa fa-spin fa-circle-o-notch "></span> {{'register.PLEASEWAIT' | translate}}</span>
+            </div>
+            <br />
+            <!-- return to register view -->
+            <div class="register-return-btn" ng-click="reg.showLogin = false" ng-disable="reg.disableSubmit">
+              <span>+ {{'register.CREATE' | translate}}</span>
+            </div>
+          </div>
+        </form>
+        <!-- END panel-->
+        <!-- REGISTER panel-->
+        <form role="form" name="reg.registerForm" novalidate="" onsubmit="return false;" class="form-validate mb-lg" ng-disable="reg.disableSubmit" ng-show="!reg.showLogin" autocomplete="off">
+          <div class="text-center register-login-text">
+            {{ 'register.HAVEACCOUNT' | translate }} <a ng-click="reg.showLogin = true">{{ 'register.LOGIN2' | translate }}</a>
+          </div>
+          <div class="panel panel-flat register-panel">
+            <!-- Initial screen -->
+            <div ng-show="!reg.showSuccess">
+              <div class="form-group" ng-class="reg.highlightName">
+                <div class="register-side-icons pull-left">
+                  <span class="fa fa-user"></span>
+                </div>
+                <input type="text" name="account_name" placeholder="{{'register.FULLNAME' | translate}}" autocomplete="off" ng-model="reg.account.fullName" required="" class="register-form-control pull-left" />
+                <div class="register-error-icon pull-right " ng-show="reg.highlightName != ''">
+                  <span class="fa fa-warning"></span>
+                </div>
+              </div>
+              <br class="clear" />
+              <div class="register-divider"></div>
+              <div class="form-group" ng-class="reg.highlightBirthday">
+                <div class="register-side-icons pull-left">
+                  <span class="fa fa-calendar"></span>
+                </div>
+                <div class="register-form-text pull-left" ng-class="reg.highlightBirthday">
+                  {{'register.BIRTHDAY' | translate}}
+                </div>
+                <div class="pull-left">
+                  <div uib-dropdown="" is-open="" class="btn-group">
+                    <button type="button" uib-dropdown-toggle="" class="btn btn-default dropdown-select">
+                    <span ng-bind="reg.selectedMonth" class=" dropdown-select-text pull-left" ng-show="reg.selectedMonth != undefined"></span>
+                    <span class=" dropdown-select-text pull-left" ng-show="reg.selectedMonth == undefined">{{'register.MONTH' | translate}}</span>
+                    <div class="pull-right dropdown-select-arrow">
+                      <span class="caret" style=""></span>
+                    </div>
+                    </button>
+                    <ul role="menu" class="dropdown-menu dropdown-menu-right animated fadeInUpShort" style="height: 200px; overflow-y: scroll;">
+                      <li ng-repeat="month in reg.months">
+                        <div ng-click="reg.changeSelectedMonth(month)" class="dropdown-menu-selection">{{month}}</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="pull-left">
+                  <div uib-dropdown="" is-open="" class="btn-group">
+                    <button type="button" uib-dropdown-toggle="" class="btn btn-default dropdown-select">
+                    <span ng-bind="reg.selectedYear" class=" dropdown-select-text pull-left" ng-show="reg.selectedYear != undefined"></span>
+                    <span class=" dropdown-select-text pull-left" ng-show="reg.selectedYear == undefined">{{'register.YEAR' | translate}}</span>
+                    <div class="pull-right dropdown-select-arrow">
+                      <span class="caret" style=""></span>
+                    </div>
+                    </button>
+                    <ul role="menu" class="dropdown-menu dropdown-menu-right animated fadeInUpShort" style="height: 200px; overflow-y: scroll;">
+                      <li ng-repeat="year in reg.years">
+                        <div ng-click="reg.changeSelectedYear(year)" class="dropdown-menu-selection">{{year}}</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <br class="clear" />
+              <div class="register-divider"></div>
+              <div class="form-group" ng-class="reg.highlightEmail" ng-show="!reg.showPhoneNumber">
+                <div class="register-side-icons pull-left">
+                  <span class="fa fa-envelope"></span>
+                </div>
+                <input type="email" name="account_email" placeholder="{{'register.EMAIL' | translate}}" autocomplete="off" ng-model="reg.account.email" required="" class="register-form-control pull-left" />
+                <div class="register-error-icon pull-right" ng-show="reg.highlightEmail != ''">
+                  <span class="fa fa-warning"></span>
+                </div>
+              </div>
+              <div class="form-group" ng-class="reg.highlightPhone" ng-show="reg.showPhoneNumber" style="position: relative;">
+                <div style="position: absolute; top: 5px; left: 30px">
+                  +86
+                </div>
+                <div class="register-side-icons pull-left">
+                  <span class="fa fa-phone"></span>
+                </div>
+                <input type="tel" name="account_phone" placeholder="{{'register.PHONE' | translate}}" autocomplete="off" ng-model="reg.account.phoneNumber" required=""
+                class="register-form-control pull-left" style="padding-left: 25px;" />
+                <div class="register-error-icon pull-right" ng-show="reg.highlightPhone != ''">
+                  <span class="fa fa-warning"></span>
+                </div>
+              </div>
+              <br class="clear" />
+              <div class="register-divider"></div>
+              <div class="form-group" ng-class="reg.highlightPassword">
+                <div class="register-side-icons pull-left">
+                  <span class="fa fa-lock"></span>
+                </div>
+                <input id="id-password" type="password" autocomplete="off" name="account_password" placeholder="{{'register.PASSWORD' | translate}}" ng-model="reg.account.password" required="" class="register-form-control pull-left" />
+                <div class="register-error-icon pull-right" ng-show="reg.highlightPassword != ''">
+                  <span class="fa fa-warning"></span>
+                </div>
+              </div>
+              <br class="clear" />
+              <div class="register-error fade3-animation" ng-show="reg.authMsg != ''">
+                {{reg.authMsg | translate}}
+                {{reg.errorPassword | translate}}
+                {{reg.errorTerms | translate}}
+              </div>
+            </div>
+          </div>
+          <!--Initial screen-->
+          <div ng-show="!reg.showSuccess">
+            <div class="register-promocode-section">
+              {{'register.PROMOCODE' | translate}}:
+            </div>
+            <div class="register-promo-box">
+              <span ng-if="!reg.allowPromoInput">
+                {{reg.promoCode}}
+              </span>
+              <input ng-if="reg.allowPromoInput" class="register-text-input" ng-model="reg.promoCode" type="text" />
+            </div>
+            <div class="register-tos-wrapper" ng-click="reg.toggleTosAgree()">
+              <img ng-src="{{reg.checkBoxImg}}" class="pull-left register-checkbox" />
+              <div class="pull-left register-tos" ng-class="reg.highlightTos">
+                {{'register.TOS' | translate}}
+              </div>
+              <br class="clear" />
+            </div>
+            <div class="register-btn" ng-click="reg.register()" ng-disable="reg.disableSubmit">
+              <span ng-show="!reg.disableSubmit">{{'register.CREATE' | translate}}</span>
+              <span ng-show="reg.disableSubmit"><span class="fa fa-spin fa-circle-o-notch "></span> {{'register.PLEASEWAIT' | translate}}</span>
+              <!--<img class="img-responsive register-btn-img" src="../app/img/btn_pill_red.png" />
+              <div class="register-btn-text">
+                <span ng-show="!reg.disableSubmit">{{'register.CREATE' | translate}}</span>
+                <span ng-show="reg.disableSubmit"><span class="fa fa-spin fa-circle-o-notch "></span> {{'register.PLEASEWAIT' | translate}}</span>
+              </div>-->
+            </div>
+          </div>
+        </form>
+        <!-- END panel-->
+      </div>
+    </div>
+    <div class="register-form-block-right" center>
+      <img src="../app/img/QR_1.jpg">
+      <br><br>
+      <p>
+        APP 下载
+      </p>
+      <br>
+      <img src="../app/img/QR_2.jpg">
+      <br><br>
+      <p>
+        微信公众号
+      </p>
+    </div>
+  </div>
+</div>
+<footer ng-include="'app/views/partials/footer.html'"></footer>
+</div>
+</div>
+
+
+
+
+

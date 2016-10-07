@@ -1,0 +1,21 @@
+[
+  {
+    "text": "Main Navigation",
+    "heading": "true",
+    "translate": "sidebar.MAINNAV"
+  },
+  {
+    "text": "Dashboard",
+    "icon": "icon-speedometer",
+    "label": "label label-info", 
+    "sref":  "app.dashboard_kadho",
+    "translate": "sidebar.DASHBOARD"
+  },
+  {
+    "text": "Contact",
+    "icon": "icon-envelope-letter",
+    "label": "label label-info", 
+    "sref":  "app.contact",
+    "translate": "sidebar.CONTACT"
+  }
+]

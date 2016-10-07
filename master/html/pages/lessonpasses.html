@@ -1,0 +1,123 @@
+﻿<div class="lesson-bg" ng-controller="LessonPassesController as reg">
+  <div class="lesson-loading fade3-animation" ng-show="reg.showPleaseWait">
+    <i class="fa fa-spin fa-refresh"></i> Loading. Please Wait.
+  </div>
+  <!-- Language selection -->
+<header ng-include="'app/views/partials/languageselector.html'"></header>
+
+
+<div class="container lesson-body">
+<div class="modalDialog" ng-show="reg.popupVideoVisible" ng-click="reg.closeVideo();">
+    <div>
+      <a href="#" title="Close" class="close" ng-click="reg.closeVideo();"><i class="fa fa-close"></i></a>
+      <video id="popupVideo" style="width: 100%"  poster="/app/img/video-cover.jpg">
+        <!-- <source src="https://s3-us-west-1.amazonaws.com/beta.kadho.com/Video_3.mp4" type="video/mp4" />
+        <source src="https://s3-us-west-1.amazonaws.com/beta.kadho.com/Video_3.ogg" type="video/ogg" />
+        <source src="https://s3-us-west-1.amazonaws.com/beta.kadho.com/Video_3.webm" type="video/webm" /> -->
+        <source src="https://s3.cn-north-1.amazonaws.com.cn/kadhoelp/Video_3.mp4" type="video/mp4" />
+        <source src="https://s3.cn-north-1.amazonaws.com.cn/kadhoelp/Video_3.ogg" type="video/ogg" />
+        <source src="https://s3.cn-north-1.amazonaws.com.cn/kadhoelp/Video_3.webm" type="video/webm" />
+      </video>
+    </div>
+  </div>
+  <img class="img-responsive center-block lesson-title" src="../app/img/lesson_title.png" />
+  
+  <div class="lesson-video-btn" ng-click="reg.showVideo()">
+    
+    <div class="lesson-video-btn-outline"></div>
+    <div class="lesson-video-btn-arrow"></div>
+    <div class="lesson-video-btn-text">
+      <span>{{'register.VIDEO' | translate}}</span>
+    </div>
+  </div>
+  <br>
+   <div class="lesson-note">
+      {{'lesson.NOTE' | translate}}
+    </div>
+  <div class="center-block text-center lesson-tickets">
+    <div ng-if="!reg.isSinglePackage()">
+      <div class="row">
+        <div class="col-md-4">
+          <a ng-click="reg.buyLessonPass('threepass')">
+            <div class="center-block lesson-gift-1" >
+              <div class="lesson-price">
+                &yen;{{ reg.prices[0] * reg.exchangeRate | number : 2 }}
+              </div>
+              <div class="lesson-ticket-amount">
+                <img class="lesson-ticket-img" src="../app/img/ticket.png" /> x{{ reg.tickets[0] }}
+              </div>
+            </div>
+            <div class="lesson-buy-btn center-block">
+              {{ 'lesson.BUY' | translate }}
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a ng-click="reg.buyLessonPass('thirtypass')">
+            <div class="center-block lesson-gift-2">
+              <div class="lesson-price">
+                &yen;{{ reg.prices[1] * reg.exchangeRate | number : 2 }}
+              </div>
+              <div class="lesson-ticket-amount">
+                <img class="lesson-ticket-img" src="../app/img/ticket.png" /> x{{ reg.tickets[1] }}
+              </div>
+              <!--<div class="lesson-save-percent">
+                {{ reg.savePercent[1] }}%
+              </div>-->
+            </div>
+            <div class="lesson-buy-btn center-block">
+              {{ 'lesson.BUY' | translate }}
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a ng-click="reg.buyLessonPass('maxpass')">
+            <div class="center-block lesson-gift-3">
+              <div class="lesson-price">
+                &yen;{{ reg.prices[2] * reg.exchangeRate | number : 2 }}
+              </div>
+              <div class="lesson-ticket-amount">
+                <img class="lesson-ticket-img" src="../app/img/ticket.png" /> x{{ reg.tickets[2] }}
+              </div>
+              <!--<div class="lesson-save-percent-2">
+                {{ reg.savePercent[2] }}%
+              </div>-->
+            </div>
+            <div class="lesson-buy-btn center-block">
+              {{ 'lesson.BUY' | translate }}
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div ng-if="reg.isSinglePackage()">
+      <div align="center">
+        <a ng-click="reg.buyLessonPass('maxpass')">
+          <div class="center-block lesson-gift-3">
+            <div class="lesson-price">
+              &yen;{{ reg.prices[0] * reg.exchangeRate | number : 2 }}
+            </div>
+            <div class="lesson-ticket-amount">
+              <img class="lesson-ticket-img" src="../app/img/ticket.png" /> x{{ reg.tickets[0] }}
+            </div>
+            <!--<div class="lesson-save-percent-2">
+              {{ reg.savePercent[2] }}%
+            </div>-->
+          </div>
+          <div class="lesson-buy-btn center-block">
+            {{ 'lesson.BUY' | translate }}
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- <br /> -->
+    <hr>
+    <a ng-click="reg.enterDownloadPage('/page/download')">
+      <div class="lesson-buy-btn center-block">
+        {{ 'lesson.DOWNLOAD' | translate }}
+      </div>
+    </a>
+  </div>
+</div>
+<footer ng-include="'app/views/partials/footer.html'"></footer>
+</div>

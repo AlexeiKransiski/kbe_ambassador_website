@@ -1,0 +1,260 @@
+﻿.lesson-bg {
+  background: none !important;
+}
+hr {
+  border-color: #2185C5;
+  color: #2185C5;
+  background-color: #2185C5;
+}
+.lesson-body {
+  margin-top: 100px;
+  max-width: 800px;
+}
+
+.lesson-tickets {
+  margin-top: -20px;
+}
+
+.lesson-ticket-img {
+  height: 20px;
+}
+
+.lesson-buy-btn {
+  background-image: url('../img/btn_pill_red_gold.png');
+  background-repeat: no-repeat;
+  background-size: 228px 61px;
+  height: 61px;
+  width: 228px;
+  display: block;
+  margin-top: 5px;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.lesson-loading {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.49);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 35%;
+  z-index: 10;
+  font-weight: bold;
+}
+
+.lesson-received {
+  background-image: url('../img/gift_box.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 646px;
+  width: 724px;
+  display: block;
+  /*padding-top: 50%;*/
+  /*padding-top: 400px;*/
+  font-size: 18px;
+  color: white;
+  position: relative;
+}
+
+.lesson-received span {
+  padding-top: 55%;
+  display: block;
+  position: relative;
+}
+
+.lesson-price {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  top: 170px;
+  z-index: 1;
+  /*left: 60px;*/
+}
+
+.lesson-ticket-amount {
+  position: absolute;
+  top: 225px;
+  z-index: 1;
+  color: white;
+  font-size: 22px;  
+  left: 85px;
+}
+
+.lesson-save-percent {
+  position: absolute;
+  top: 115px;
+  z-index: 1;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;  
+  left: 150px;
+}
+
+.lesson-save-percent-2 {
+  position: absolute;
+  top: 128px;
+  z-index: 1;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;  
+  left: 165px;
+}
+
+.lesson-video-btn-text {
+  font-size: 23px;
+  color: white;
+  margin-top: -32px;
+  margin-left: 30px;
+  text-align: left;
+}
+
+.lesson-video-btn {
+  /*background-image: url("../img/btn_pill_red.png");*/
+  width: 220px;
+  height: 57px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  /*text-align: center;*/
+  position: relative;
+  background: #00aeef;
+  background: -webkit-linear-gradient(#00aeef, #00aeef);
+  background: -o-linear-gradient(#00aeef, #00aeef);
+  background: -moz-linear-gradient(#00aeef, #00aeef);
+  background: linear-gradient(#00aeef, #00aeef);
+  border: 2px solid #FFFFFF;
+  padding: 10px;
+  border-radius: 100px;
+}
+
+.lesson-video-btn-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  margin-left: 5px;
+  border-width: 15px 0 15px 25px;
+  border-color: transparent transparent transparent #ffffff;
+}
+
+.lesson-video-btn-outline:hover:before, .lesson-video-btn-outline:focus:before {
+   width: 242px;
+   height: 75px;
+   margin-top: -21px;
+   margin-left: -23px;
+    border: #FFFFFF solid 3px;
+}
+
+.lesson-video-btn-outline:before {
+  content: '';
+   border-radius: 100px;
+   width: 220px;
+  height: 57px;
+  position: absolute;
+  border: #FFFFFF solid 0px;
+  margin-top: -10px;
+  margin-left: -10px;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: width, height, margin-left, margin-top, border;
+  transition-property: width, height, margin-top, margin-left, border;
+}
+
+.lesson-video-btn-outline {
+  display: block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+.lesson-gift-1 {
+  background-image: url('../img/box1.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 232px;
+  height: 303px;
+  position: relative;
+  display: block;
+}
+
+.lesson-gift-2 {
+  background-image: url('../img/box2.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 232px;
+  height: 303px;
+  position: relative;
+  display: block;
+}
+
+.lesson-gift-3 {
+  background-image: url('../img/box3.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 232px;
+  height: 303px;
+  position: relative;
+  display: block;
+}
+
+.lesson-note {
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+  color: @brand-primary;
+  font-weight: 550;
+}
+
+.lesson-title {
+    width: 400px;
+    z-index: 1;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+@media (max-width: 500px) {
+  .lesson-title {
+    width: 400px;
+    z-index: 1;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  .lesson-note {
+  font-size: 15px;
+}
+}
+
+@media (max-width: 800px) {
+  .lesson-received {
+    height: 323px;
+    width: 362px;
+    display: block;
+    /*padding-top: 50%;*/
+    color: white;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 362px) {
+  .lesson-received {
+    height: 323px;
+    width: 100%;
+    display: block;
+    /*padding-top: 50%;*/
+    color: white;
+    font-size: 14px;
+  }
+}

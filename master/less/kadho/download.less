@@ -1,0 +1,94 @@
+﻿@import "kadho-variables.less";
+
+.download-body {
+  margin-top: 50px;
+  font-size: 26px;
+  z-index: 10 !important;
+  max-width: 700px;
+  color: white;
+}
+
+.download-body a:hover {
+  text-decoration: none;
+}
+
+.download-title {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.download-body .col-md-6 {
+}
+
+.download-img-1 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-image: url("../img/islands_left_side.png");
+  background-size: 100%;
+  width: 422px;
+  height: 435px;
+  display: block;
+  z-index: -1;
+}
+
+.download-img-2 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-image: url("../img/islands_right_side.png");
+  background-size: 100%;
+  width: 496px;
+  height: 444px;
+  display: block;
+  z-index: -1;
+}
+
+.download-btn {
+  display: block;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid white;
+  border-radius: 100px;
+  max-width: 270px;
+  padding-top: 5px;
+  margin-top: 20px;
+}
+
+.download-btn span {
+  padding-top: 15px;
+}
+
+.download-icon {
+  height: 50px;
+  padding: 5px;
+  padding-top: 0px;
+}
+
+@media (max-width: 915px) {
+  .download-img-1 {
+    width: 211px;
+    height: 217px;
+  }
+
+  .download-img-2 {
+    width: 248px;
+    height: 222px;
+  }
+}
+
+@media (max-width: 470px) {
+  .download-img-2 {
+    background-image: none;
+  }
+
+  .download-title {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+}

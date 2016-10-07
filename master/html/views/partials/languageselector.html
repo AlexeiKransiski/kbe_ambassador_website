@@ -1,0 +1,19 @@
+﻿  <!-- Language selection -->
+<div uib-dropdown="" is-open="language.listIsOpen" class="top-nav-button">
+
+  <a ng-show="user != undefined" ng-click="logoff()">
+    <span class="fa  fa-sign-out"></span>
+  </a>
+
+  <a uib-dropdown-toggle="">
+    <span class="fa  fa-globe"></span>
+  </a>
+  <ul role="menu" class="dropdown-menu dropdown-menu-right animated fadeInUpShort" style="width: 150px;">
+    <li>
+      <div ng-click="language.set('en', $event)" class="dropdown-menu-selection">{{'sidebar.ENGLISH' | translate}}</div>
+    </li>
+    <li>
+      <div ng-click="language.set('cn_zh', $event)" class="dropdown-menu-selection">{{'sidebar.CHINESE' | translate}}</div>
+    </li>
+  </ul>
+</div>

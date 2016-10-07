@@ -1,0 +1,50 @@
+﻿<div class="lesson-bg" ng-controller="GiftReceivedController as ctrl">
+  <!-- Language selection -->
+  <header ng-include="'app/views/partials/languageselector.html'"></header>
+  <div class="container">
+    
+    <div class="center-block text-center">
+
+      <div class="lesson-received center-block">
+        <span>
+          {{ ctrl.giftMessage | translate }}        
+        </span>
+        
+        <div ng-if="ctrl.showGiftFullMessage">
+          <div ng-show="ctrl.giftCodeData.fullName == null">
+            <div ng-show="language.selected == 'English'">
+              You have received {{ctrl.giftCodeData.discountPercentage}}% {{ctrl.giftCodeData.name | translate}}!
+            </div>
+            <div ng-show="language.selected == 'Chinese'">
+              您已收到 {{ctrl.giftCodeData.discountPercentage}}% {{ctrl.giftCodeData.name | translate}}!
+            </div>
+          </div>
+          <div ng-show="ctrl.giftCodeData.fullName != null">
+            <div ng-show="language.selected == 'English'">
+              You have received {{ctrl.giftCodeData.discountPercentage}}% {{ctrl.giftCodeData.name | translate}}
+              <br />
+              from {{ctrl.giftCodeData.fullName}}!
+            </div>
+            <div ng-show="language.selected == 'Chinese'">
+              您已从 {{ctrl.giftCodeData.discountPercentage}}% {{ctrl.giftCodeData.name | translate}}
+              <br />
+              收到 {{ctrl.giftCodeData.fullName}}!
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <a href="/page/lessonpasses">
+        <div class="lesson-buy-btn center-block">
+          {{ 'giftReceived.CONTINUE' | translate }}
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+  
+  <footer ng-include="'app/views/partials/footer.html'"></footer>
+
+</div>

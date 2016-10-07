@@ -1,0 +1,62 @@
+﻿{
+  "register": {
+    "ALLRIGHTSRESERVED": "All rights reserved.",
+    "COPYRIGHT": "Copyright",
+    "TOSVIEW": "Terms",
+    "PRIVACY": "Privacy",
+    "TOS": "I agree to the terms of the User Agreement in the Terms of Use",
+    "BIRTHDAY": "Birthday",
+    "YEAR": "Year",
+    "MONTH": "Month",
+    "FULLNAME": "Full Name",
+    "EMAIL": "E-mail",
+    "PHONE": "Phone Number",
+    "PASSWORD": "Password",
+    "PROMOCODE": "Promo Code",
+    "CREATE": "Create Account",
+    "DOWNLOAD": "Download Now!",
+    "PLEASEWAIT": "Please Wait",
+    "ERROR1": "Name, Birthday, E-mail, or Password appear to be invalid.",
+    "ERROR2": "Email is already in use.",
+    "ERROR3": "Invalid code.",
+    "ERROR4": "Code is already in use.",
+    "ERROR5": "Code is expired.",
+    "ERROR6": "Code has reached max uses.",
+    "ERROR7": "Server Request Error",
+    "ERROR8": "Phone invalid phone number.",
+    "ERROR9": "Phone number is already in use.",
+    "ERROR10": "Password must be between 6 and 32 characters long.",
+    "ERROR11": "Terms must be accepted.",
+    "ERROR12": "Incorrect credentials.",
+    "ERROR13": "Name, Birthday, Phone Number, or Password appear to be invalid.",
+    "LESSONPASSES": "Lesson Passes",
+    "DISCOUNT": "discount",
+    "LOGIN": "Login",
+    "HAVEACCOUNT": "Already have an account?",
+    "LOGIN2": "Log in here",
+    "FORGOT": "Forgot Password?",
+    "LANDING2": "Come to Kadho and find out how the American kids study English.",
+    "VIDEO": "Watch Video"
+  },
+  "lesson": {
+    "BUY": "BUY",
+    "DOWNLOAD": "Download",
+    "NOTE": "Note: Actual price may vary due to USD and CNY currency fluctuation."
+  },
+  "giftReceived": {
+    "INVALID": "An invalid gift code was entered.",
+    "USER_GIFT_SELF_USE_MAX": "This gift code has reached max usage.",
+    "UNCLAIMED_GIFT": "Gift code used successfully!",
+    "ALREADY_USED": "You have already used this gift code.",
+    "EXPIRED": "This gift code has expired.",
+    "SYSTEM_GIFT_MAX": "This gift code has reached max usage.",
+    "SYSTEM_GIFT_SUCCESS": "Gift code used successfully!",
+    "USER_GIFT_SUCCESS": "Gift code used successfully!",
+    "USER_GIFT_SUCCESS_MAX": "Gift code used successfully!",
+    "CONTINUE": "Continue"
+  },
+  "sidebar": {
+    "ENGLISH": "English",
+    "CHINESE": "Chinese (中文)"
+  }
+}

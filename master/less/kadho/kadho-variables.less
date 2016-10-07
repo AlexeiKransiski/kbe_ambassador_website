@@ -1,0 +1,109 @@
+ // Brand colors
+@brand-primary: #2185C5;
+@brand-secondary: #fb7300;
+@brand-grey: #cccccc;
+
+@brand-success: #8BC53F;
+@brand-info: #5bc0de;
+@brand-warning: #f0ad4e;
+@brand-danger: #e64b65;
+@brand-stats: #8BC53F;
+
+// text colors & shadows
+@text-color: rgb(70, 77, 81);
+@text-shadow: rgb(56, 56, 56);
+
+@link-color: @brand-primary;
+
+@body-bg: white;
+
+
+// input colors
+@input-bg: #f7fcff;
+@input-border: #eaeffe;
+@input-border-focus: lighten(@brand-primary, 15%);
+
+@input-color-placeholder: #d1d1d1;
+
+// border radius
+@border-radius-base: 8px;
+@border-radius-large: 5px;
+@border-radius-xlarge: 20px;
+@border-radius-small: 1px;
+
+// navbar
+@navbar-default-bg: white;
+@navbar-default-link-color: darken(@brand-primary, 5%);
+@navbar-border-radius: 0px;
+
+// inverse navbar
+@navbar-inverse-bg: @brand-primary;
+@navbar-inverse-link-color: white;
+@navbar-inverse-link-hover-color: lighten(@brand-primary, 50%);
+@navbar-inverse-toggle-icon-bar-bg: white;
+@navbar-inverse-toggle-hover-bg: lighten(@brand-primary, 10%);
+
+// dropdown
+@dropdown-link-color: darken(@brand-primary, 5%);
+@dropdown-link-hover-color: white;
+@dropdown-link-hover-bg: lighten(@brand-primary, 5%);
+@dropdown-bg: white;
+@dropdown-divider-bg: lighten(@brand-primary, 20%);
+@dropdown-link-active-bg: rgba(200, 200, 200, 0.8);
+
+@banner-font-color: #fdfbf0;
+
+@dropshadow-color: #888;
+@shadow: 0px 0px 1px @dropshadow-color;
+
+// font
+/*@font-family-base: Helvetica, Arial, sans-serif;*/
+@font-family-base: nimbus-sans, Helvetica, Arial;
+
+.text-stats {
+  color: @brand-stats;
+}
+.clear {
+  clear: both;
+}
+
+.btn-success {
+  background-color: @brand-success;
+}
+.btn-success:hover {
+  background-color: darken(@brand-success, 10%);
+}
+.form-validate .form-control.ng-dirty.ng-valid, .form-validate .form-control.ng-dirty.ng-valid:focus {
+  border-color: @brand-grey;
+}
+
+
+
+// Buttons
+// -------------------------
+
+@btn-font-weight:                normal;
+
+@btn-default-color:              #333;
+@btn-default-bg:                 #fff;
+@btn-default-border:             #ccc;
+
+@btn-primary-color:              #fff;
+@btn-primary-bg:                 #8BC53F;
+@btn-primary-border:             darken(@btn-primary-bg, 5%);
+
+@btn-success-color:              #fff;
+@btn-success-bg:                 #8BC53F;
+@btn-success-border:             darken(@btn-success-bg, 5%);
+
+@btn-warning-color:              #fff;
+@btn-warning-bg:                 @brand-warning;
+@btn-warning-border:             darken(@btn-warning-bg, 5%);
+
+@btn-danger-color:               #fff;
+@btn-danger-bg:                  @brand-danger;
+@btn-danger-border:              #F74F73;
+
+@btn-info-color:                 #fff;
+@btn-info-bg:                    @brand-info;
+@btn-info-border:                darken(@btn-info-bg, 5%);

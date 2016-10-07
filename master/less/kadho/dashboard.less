@@ -1,0 +1,389 @@
+@import "kadho-variables.less";
+
+.dashboard-main {
+  background-color: #e2e6e9;
+  padding: 30px;
+  color: #414e5e;
+}
+
+.dashboard-side-nav {
+  font-size: 1.1em;
+  color: #d1d1d1;
+}
+
+.dashboard-side-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-content-section {
+  padding-top: 20px;
+  /*padding-bottom: 40px;*/
+}
+
+.dashboard-side-nav li {
+  padding: 20px;
+  border-bottom: 1px solid #1d2124;
+}
+
+.progress-card {
+  background-color: white;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  /*width: 100%;*/
+  /*height: 400px;
+  width: 370px;*/
+  /*border: 1px solid #e2e2e2;
+  display: block;
+  background-color: white;*/
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.progress-card-title {
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 10px;
+  background-color: #f6f8f7;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.progress-card-content {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+}
+
+.progress-card-stats {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.progress-card-percent-center {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 0;
+  padding-top: 12%;
+  padding-bottom: 18%;
+  margin-top: -22%;
+  margin-left: -14.5%;
+  font-size: 2em;
+  text-align: center;
+  color: @brand-stats;
+}
+
+.performance-chart-wrapper {
+  border-radius: 0;
+  padding: 20px 0 20px 0;
+  border: none;
+}
+
+.progress-card-overall-score {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.dashboard-pie-chart {
+  max-height: auto;
+}
+
+.dashboard-pill-button {
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9em;
+  padding: 5px;
+  width: 100px;
+  height: 30px;
+}
+
+.dashboard-week {
+  float: right;
+  border-radius: 30px 0 0 30px;
+  background-color: white;
+  border-bottom: 1px solid #e5e1e2;
+  border-top: 1px solid #e5e1e2;
+  border-left: 1px solid #e5e1e2;
+}
+
+.dashboard-week-selected {
+  background-color: @brand-stats;
+  border-bottom: 1px solid @brand-stats;
+  border-top: 1px solid @brand-stats;
+  border-left: 1px solid @brand-stats;
+  color: white;
+}
+
+.dashboard-month {
+  float: right;
+  border-radius: 0 30px 30px 0;
+  background-color: white;
+  border-bottom: 1px solid #e5e1e2;
+  border-top: 1px solid #e5e1e2;
+}
+
+.dashboard-month-selected {
+  background-color: @brand-stats;
+  border-bottom: 1px solid @brand-stats;
+  border-top: 1px solid @brand-stats;
+  color: white;
+}
+
+.dashboard-year {
+  float: right;
+  background-color: white;
+  border-radius: 0 30px 30px 0;
+  border-bottom: 1px solid #e5e1e2;
+  border-top: 1px solid #e5e1e2;
+  border-right: 1px solid #e5e1e2;
+}
+
+.dashboard-year-selected {
+  background-color: @brand-stats;
+  border-bottom: 1px solid @brand-stats;
+  border-right: 1px solid @brand-stats;
+  border-left: 1px solid @brand-stats;
+  color: white;
+}
+
+.dashboard-curriculum-log {
+  padding: 10px 15px 10px 15px;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.dashboard-curriculum-stars {
+  font-size: 0.8em;
+}
+
+.stars-empty {
+  color: #d0d0d0;
+}
+
+.stars-fill {
+  color: @brand-stats;
+}
+
+.dashboard-incomplete-circle {
+  color: #95bcdd;
+}
+
+.dashboard-complete-check {
+  color: @brand-stats;
+}
+
+.dashboard-curriculum-table {
+  margin-top: 20px;
+  width: 100%;
+  color: #7f7f7f;
+}
+
+.dashboard-curriculum-table th {
+  color: #7f7f7f;
+  font-weight: normal;
+  font-size: 1.1em;
+  padding: 5px;
+}
+
+.dashboard-curriculum-table td {
+  color: #7f7f7f;
+  padding: 5px;
+}
+
+.dashboard-curriculum-table tr {
+  border-top: 1px solid #e1e1e1;
+}
+
+.dashboard-curriculum-thead tr {
+  border: none;
+}
+
+.dashboard-curriculum-title {
+  font-size: 1em;
+  width: 140px;
+}
+
+.dashboard-curriculum-table-col-1 {
+  width: 100px;
+}
+
+.dashboard-curriculum-table-wrapper {
+  overflow-x: scroll;
+}
+
+.dashboard-performance-chart {
+  max-height: 300px;
+}
+
+
+.dashboard-curriculum-progress-bar-bg {
+  background-color: #d7d7d7;
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 15px;
+  border-radius: 20px;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+.dashboard-curriculum-progress-bar-fill {
+  background-color: @brand-stats;
+  display: block;
+  position: absolute;
+  height: 15px;
+  border-radius: 20px;
+}
+
+.dashboard-curriculum-progress-bar-text {
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+@media (max-width: @screen-sm-min) {
+  .progress-card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  .dashboard-curriculum-stars {
+    font-size: 1em;
+  }
+
+  .progress-card {
+    height: auto;
+  }
+
+  .performance-chart-wrapper {
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 20px;
+    /*height: 380px;*/
+    border: 1px solid #e2e2e2;
+    /*display: block;*/
+    background-color: white;
+  }
+
+  .dashboard-curriculum-title {
+    font-size: 1.3em;
+  }
+
+  .dashboard-pill-button {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 12px;
+    width: 120px;
+    height: 45px;
+  }
+
+  .dashboard-performance-chart {
+    height: 400px;
+    max-height: 500px;
+  }
+
+  .dashboard-curriculum-progress-bar-bg {
+    width: 150px;
+    height: 18px;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 5px;
+  }
+
+  .dashboard-curriculum-progress-bar-fill {
+    height: 18px;
+    border-radius: 20px;
+  }
+
+  .dashboard-curriculum-progress-bar-text {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+
+  .dashboard-curriculum-table th {
+    padding: 20px;
+  }
+
+  .dashboard-curriculum-table td {
+    padding: 20px;
+  }
+
+  .dashboard-curriculum-table-col-1 {
+    width: 200px;
+  }
+
+  .dashboard-curriculum-table-wrapper {
+    overflow-x: hidden;
+  }
+
+  .dashboard-curriculum-log {
+    padding: 20px 25px 20px 25px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+  .dashboard-curriculum-stars {
+    font-size: 1.5em;
+  }
+
+  .progress-card {
+    /*height: 280px;*/
+  }
+
+  .dashboard-pie-chart {
+    /*max-height: 80px;*/
+  }
+
+  .progress-card-stats {
+    padding-top: 5px;
+  }
+
+  .progress-card-overall-score {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .dashboard-curriculum-title {
+    font-size: 1.5em;
+  }
+
+  .dashboard-curriculum-title {
+    width: 200px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+  .dashboard-curriculum-stars {
+    font-size: 1.5em;
+  }
+
+  .progress-card {
+    /*height: 350px;*/
+  }
+
+  .dashboard-pie-chart {
+    /*max-height: 100px;*/
+  }
+
+  .progress-card-stats {
+    padding-top: 10px;
+  }
+
+  .progress-card-overall-score {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}

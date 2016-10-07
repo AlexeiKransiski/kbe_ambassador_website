@@ -1,0 +1,62 @@
+{
+  "register": {
+    "ALLRIGHTSRESERVED": "版权所有。",
+    "COPYRIGHT": "公司保留版权",
+    "TOSVIEW": "条件",
+    "PRIVACY": "隐私政策",
+    "TOS": "我同意用户协议条款的使用条款",
+    "BIRTHDAY": "生日",
+    "YEAR": "年",
+    "MONTH": "月",
+    "FULLNAME": "全名",
+    "EMAIL": "电子邮件",
+    "PHONE": "电话号码",
+    "PASSWORD": "密码",
+    "PROMOCODE": "促销代码",
+    "CREATE": "创建账户",
+    "DOWNLOAD": "立即下载 ！",
+    "PLEASEWAIT": "请等待",
+    "ERROR1": "姓名，生日，邮箱，或者密码不正确。",
+    "ERROR2": "该邮箱已经被使用",
+    "ERROR3": "礼卡代码无效",
+    "ERROR4": "代码已经被使用",
+    "ERROR5": "代码过期",
+    "ERROR6": "代码已被使用数次",
+    "ERROR7": "连接服务器错误",
+    "ERROR8": "无效的电话的电话号码。",
+    "ERROR9": "电话号码已被使用。",
+    "ERROR10": "密码必须是 6 和 32 个字符之间。",
+    "ERROR11": "必须接受条款。",
+    "ERROR12": "不正确的凭据。",
+    "ERROR13": "姓名、 生日、 电话号码或密码显示为无效。",
+    "LESSONPASSES": "课程通过",
+    "DISCOUNT": "的折扣！",
+    "LOGIN": "登录",
+    "HAVEACCOUNT": "已经有一个帐户吗？",
+    "LOGIN2": "登录",
+    "FORGOT": "忘记了密码？",
+    "LANDING2": "3个月让宝宝学会英语基础发音。",
+    "VIDEO": "为什么选择开豆"
+  },
+  "lesson": {
+    "BUY": "购买",
+    "DOWNLOAD": "下载",
+    "NOTE": "注意：由于美元和人民币之间汇率的波动，实际价格可能会有小幅度偏差。"
+  },
+  "giftReceived": {
+    "INVALID": "输入了无效的礼物代码。",
+    "USER_GIFT_SELF_USE_MAX": "这份礼物代码已达到最大使用率。",
+    "UNCLAIMED_GIFT": "成功使用的礼物代码 ！",
+    "ALREADY_USED": "您已经使用此礼物代码。",
+    "EXPIRED": "这份礼物代码已过期。",
+    "SYSTEM_GIFT_MAX": "这份礼物代码已达到最大使用率。",
+    "SYSTEM_GIFT_SUCCESS": "成功使用的礼物代码 ！",
+    "USER_GIFT_SUCCESS": "成功使用的礼物代码 ！",
+    "USER_GIFT_SUCCESS_MAX": "成功使用的礼物代码 ！",
+    "CONTINUE": "继续"
+  },
+  "sidebar": {
+    "ENGLISH": "英语 (English)",
+    "CHINESE": "中文"
+  }
+}
